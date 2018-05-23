@@ -1,0 +1,65 @@
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<style>
+    body {
+        font-size: 16pt;
+    }
+    iframe {
+        vertical-align: middle;
+    }
+    a, a:visited, a:active, a:focus {
+        color: dodgerblue;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    code {
+        padding: 2px 4px;
+        color: #d14;
+        white-space: nowrap;
+        background-color: #f7f7f9;
+        border: 1px solid #e1e1e8;
+        font-size: 13pt;
+    }
+</style>
+
+<h1>Better Error Pages Demo</h1>
+
+<ul>
+    <li>
+        <a th:href="@{/demo}">Demo error page.</a>
+    </li>
+    <li>
+        <a th:href="@{/demo/broken-template-with-syntax-error}">Error page for a broken template file (with syntax error).</a>
+    </li>
+    <li>
+        <a th:href="@{/demo/broken-template-with-missing-property}">Error page for a broken template file (with missing property error).</a>
+    </li>
+    <li>
+        <a th:href="@{/demo/missing-template}">Error page for a missing template file.</a>
+    </li>
+    <li>
+        <a th:href="@{/non-public}">Error from non-public classes from the same file.</a>
+    </li>
+    <li>
+        <a th:href="@{/wrong-naming}">Error in a class under wrongly named package.</a>
+    </li>
+    <li>
+        <a th:href="@{/demo/error-from-another-module}">Error in a class from another module.</a>
+    </li>
+    <li>
+        <a th:href="@{/rest}">Error in a <code>@RestController</code> method.</a>
+        <ul>
+            <li>Call with <code>Accept: application/json</code> request header and see response headers.</li>
+        </ul>
+    </li>
+</ul>
+
+<footer>
+    Better Error Pages Project
+    <a class="github-button" href="https://github.com/kodgemisi/better-error-pages-spring-boot-starter" data-icon="octicon-star" data-size="large" aria-label="Star kodgemisi/better-error-pages-spring-boot-starter on GitHub">Star</a>
+</footer>
+
+<a href="https://github.com/kodgemisi/better-error-pages-spring-boot-starter">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
+</a>

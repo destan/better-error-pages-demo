@@ -1,0 +1,10 @@
+spring.profiles.active: dev
+
+logging.level.com.kodgemisi: trace
+
+# Following is optional, it's resolved from BetterErrorPagesDemoApplication class
+# however giving this property improves startup performance significantly but won't affect runtime performance.
+#better-error-pages:package-name: com.example.bettererrorpagesdemo
+
+better-error-pages:
+  archive-timeout: 10000
