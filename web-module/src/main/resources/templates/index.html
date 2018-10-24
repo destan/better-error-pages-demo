@@ -21,6 +21,9 @@
         border: 1px solid #e1e1e8;
         font-size: 13pt;
     }
+    img {
+        border: 1px solid lightgray;
+    }
 </style>
 
 <h1>Better Error Pages Demo</h1>
@@ -28,6 +31,9 @@
 <ul>
     <li>
         <a th:href="@{/demo}">Demo error page.</a>
+    </li>
+    <li>
+        <a th:href="@{/demoz}">Demo 404 error page.</a>
     </li>
     <li>
         <a th:href="@{/demo/broken-template-with-syntax-error}">Error page for a broken template file (with syntax error).</a>
@@ -50,7 +56,13 @@
     <li>
         <a th:href="@{/rest}">Error in a <code>@RestController</code> method.</a>
         <ul>
-            <li>Call with <code>Accept: application/json</code> request header and see response headers.</li>
+            <li>
+                <div>Call with <code>Accept: application/json</code> request header and see response headers.</div>
+                <img th:src="@{/rest.png}">
+                <br><br>
+                <img width="800" th:src="@{/rest-error.png}">
+                <p>Note that for this demo <code>better-error-pages.archive-timeout</code> is set to 10s. It's configurable and default is 15m.</p>
+            </li>
         </ul>
     </li>
 </ul>
