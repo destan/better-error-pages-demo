@@ -1,6 +1,6 @@
 This is the demo project's repo see [Better Error Pages Repository](https://github.com/kodgemisi/better-error-pages-spring-boot-starter)
 
-##Heroku Deployment notes
+## Heroku Deployment notes
 
 Need to set following key-value in `Config Vars` on Heroku app settings page:
 
