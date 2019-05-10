@@ -60,18 +60,18 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.github.kodgemisi</groupId>-->
-<!--            <artifactId>better-error-pages-spring-boot-starter</artifactId>-->
-<!--            <version>0.5.0</version>-->
-<!--        </dependency>-->
-
-<!--        For local development & tryouts-->
         <dependency>
-            <groupId>io.summerframework</groupId>
+            <groupId>com.github.kodgemisi</groupId>
             <artifactId>better-error-pages-spring-boot-starter</artifactId>
             <version>${better-error-pages.version}</version>
         </dependency>
+
+<!--        For local development -->
+<!--        <dependency>-->
+<!--            <groupId>io.summerframework</groupId>-->
+<!--            <artifactId>better-error-pages-spring-boot-starter</artifactId>-->
+<!--            <version>${better-error-pages.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
