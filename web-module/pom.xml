@@ -32,6 +32,7 @@
         <java.version>1.8</java.version>
 
         <spring.version>2.2.0.M1</spring.version>
+        <better-error-pages.version>0.5.1</better-error-pages.version>
     </properties>
 
     <dependencies>
@@ -47,22 +48,30 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>com.github.kodgemisi</groupId>
-            <artifactId>better-error-pages-spring-boot-starter</artifactId>
-            <version>0.5.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
-<!--        For local development & tryouts-->
 <!--        <dependency>-->
-<!--            <groupId>io.summerframework</groupId>-->
+<!--            <groupId>com.github.kodgemisi</groupId>-->
 <!--            <artifactId>better-error-pages-spring-boot-starter</artifactId>-->
 <!--            <version>0.5.0</version>-->
 <!--        </dependency>-->
+
+<!--        For local development & tryouts-->
+        <dependency>
+            <groupId>io.summerframework</groupId>
+            <artifactId>better-error-pages-spring-boot-starter</artifactId>
+            <version>${better-error-pages.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

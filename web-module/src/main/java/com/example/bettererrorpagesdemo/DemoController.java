@@ -42,4 +42,9 @@ public class DemoController {
 		sampleServiceFromModule.someMethod(null);
 		return "fancy-name";
 	}
+
+	@GetMapping("/error-from-layout")
+	String errorFromLayout() {
+		return "products/contentWithLayout";
+	}
 }

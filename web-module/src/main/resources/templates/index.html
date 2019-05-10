@@ -1,77 +1,114 @@
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<style>
-    body {
-        font-size: 16pt;
-    }
-    iframe {
-        vertical-align: middle;
-    }
-    a, a:visited, a:active, a:focus {
-        color: dodgerblue;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    code {
-        padding: 2px 4px;
-        color: #d14;
-        white-space: nowrap;
-        background-color: #f7f7f9;
-        border: 1px solid #e1e1e8;
-        font-size: 13pt;
-    }
-    img {
-        border: 1px solid lightgray;
-    }
-</style>
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spring Better Error Pages Demo">
+    <title>Spring Better Error Pages Demo</title>
 
-<h1>Better Error Pages Demo</h1>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
 
-<ul>
-    <li>
-        <a th:href="@{/demo}">Demo error page.</a>
-    </li>
-    <li>
-        <a th:href="@{/demoz}">Demo 404 error page.</a>
-    </li>
-    <li>
-        <a th:href="@{/demo/broken-template-with-syntax-error}">Error page for a broken template file (with syntax error).</a>
-    </li>
-    <li>
-        <a th:href="@{/demo/broken-template-with-missing-property}">Error page for a broken template file (with missing property error).</a>
-    </li>
-    <li>
-        <a th:href="@{/demo/missing-template}">Error page for a missing template file.</a>
-    </li>
-    <li>
-        <a th:href="@{/non-public}">Error from non-public classes from the same file.</a>
-    </li>
-    <li>
-        <a th:href="@{/wrong-naming}">Error in a class under wrongly named package.</a>
-    </li>
-    <li>
-        <a th:href="@{/demo/error-from-another-module}">Error in a class from another module.</a>
-    </li>
-    <li>
-        <a th:href="@{/rest}">Error in a <code>@RestController</code> method.</a>
-        <ul>
-            <li>
-                <div>Call with <code>Accept: application/json</code> request header and see response headers.</div>
-                <img th:src="@{/rest.png}">
-                <br><br>
-                <img width="800" th:src="@{/rest-error.png}">
-                <p>Note that for this demo <code>better-error-pages.archive-timeout</code> is set to 10s. It's configurable and default is 15m.</p>
+    <style>
+        body {
+            font-size: 16pt;
+        }
+        iframe {
+            vertical-align: middle;
+        }
+        a, a:visited, a:active, a:focus {
+            color: dodgerblue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            padding: 2px 4px;
+            color: #d14;
+            white-space: nowrap;
+            background-color: #f7f7f9;
+            border: 1px solid #e1e1e8;
+            font-size: 13pt;
+        }
+        main img {
+            border: 1px solid lightgray;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+
+<a style=" position: absolute; right: 0; " href="https://github.com/destan/better-error-pages-demo">
+    <img src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+</a>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white container">
+    <h1 class="my-0 mr-md-auto font-weight-normal">Better Error Pages Demo</h1>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="https://github.com/kodgemisi/better-error-pages-spring-boot-starter">
+            <i class="fab fa-github"></i>
+            Better Error Pages
+        </a>
+        <a class="p-2 text-dark" href="https://kodgemisi.github.io/better-error-pages-spring-boot-starter/">
+            <i class="fab fa-java"></i>
+            Documentation
+        </a>
+    </nav>
+</div>
+
+<main role="main" class="flex-shrink-0 mb-5">
+    <div class="container">
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a th:href="@{/demo}">Demo error page.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demoz}">Demo 404 error page.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demo/broken-template-with-syntax-error}">Error page for a broken template file (with syntax error).</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demo/broken-template-with-missing-property}">Error page for a broken template file (with missing property error).</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demo/missing-template}">Error page for a missing template file.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demo/error-from-layout}">Error from Thymeleaf layout.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/non-public}">Error from non-public classes from the same file.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/wrong-naming}">Error in a class under wrongly named package.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/demo/error-from-another-module}">Error in a class from another module.</a>
+            </li>
+            <li class="list-group-item">
+                <a th:href="@{/rest}">Error in a <code>@RestController</code> method.</a>
+                <ul>
+                    <li class="mt-2">
+                        Call with <code>Accept: application/json</code> request header and inspect the response headers.
+                    </li>
+                    <li>
+                        <div>When there is an error, there will be <code>better-error-pages</code> response header and its value will be an URL to the archived error page.</div>
+
+                        <img class="mt-4" th:src="@{/rest.png}">
+                        <img class="mt-4" width="800" th:src="@{/rest-error.png}">
+
+                        <div class="alert alert-secondary mt-3" role="alert">
+                            Note that for this demo <code>better-error-pages.archive-timeout</code> is set to 5min. It's configurable and default is 15m.
+                        </div>
+                    </li>
+                </ul>
             </li>
         </ul>
-    </li>
-</ul>
+    </div>
+</main>
 
-<footer>
-    Better Error Pages Project
-    <a class="github-button" href="https://github.com/kodgemisi/better-error-pages-spring-boot-starter" data-icon="octicon-star" data-size="large" aria-label="Star kodgemisi/better-error-pages-spring-boot-starter on GitHub">Star</a>
-</footer>
-
-<a href="https://github.com/kodgemisi/better-error-pages-spring-boot-starter">
-    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub">
-</a>
+</body>
+</html>
